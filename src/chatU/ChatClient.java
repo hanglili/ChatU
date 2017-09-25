@@ -36,7 +36,7 @@ public class ChatClient extends JFrame implements Runnable {
     add("South", input = new JTextField());
     input.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "input");
     input.getActionMap().put("input", new Writing());
-
+    setSize(500,500);
     addWindowListener(new WindowAdapter() {
       @Override
       public void windowClosing(WindowEvent e) {
@@ -44,7 +44,7 @@ public class ChatClient extends JFrame implements Runnable {
       }
     });
 
-    pack();
+//    pack();
     setVisible(true);
     input.requestFocus();
     listener = new Thread (this);
